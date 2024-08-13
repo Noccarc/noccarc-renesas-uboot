@@ -99,12 +99,6 @@
 			default-state = "off";
 			linux,default-trigger = "none";
 		};
-        gpio8 {
-			gpios = <&P44 1 GPIO_ACTIVE_HIGH>;  //116
-			label = "audio_enable";
-			default-state = "on";
-			linux,default-trigger = "none";
-		};
         gpio9 {
 			gpios = <&P47 0 GPIO_ACTIVE_HIGH>;  //113
 			label = "mcu_sens_rst";
@@ -170,10 +164,45 @@
 
 
 
+
 &i2c1 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&i2c1_pins>;
 	status = "disabled";
 
 	
+};
+
+
+&ehci0 {
+	
+	status="okay";
+};
+
+&ohci0 {
+	
+	dr_mode = "host";
+	status = "okay";
+};
+
+&ehci1 {
+	
+	status = "okay";
+};
+
+&ohci1 {
+	
+	status = "okay";
+};
+
+&hsusb {
+        status = "okay";
+};
+
+&usb2_phy1 {
+        status = "okay";
+};
+
+&usb2_phy0 {
+        status = "okay";
 };
