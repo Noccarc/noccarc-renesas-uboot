@@ -30,13 +30,13 @@
 		gpio0 {
 			gpios = <&P40 2 GPIO_ACTIVE_HIGH>; //98
 			label = "vab_enable";
-			default-state = "off";
+			default-state = "on";
 			linux,default-trigger = "none";
 		};
         led1 {
 			gpios = <&P39 1 GPIO_ACTIVE_HIGH>; // 97
 			label = "vab_y";
-			default-state = "off";
+			default-state = "on";
 			linux,default-trigger = "none";
 		};
         led2 {
@@ -55,7 +55,7 @@
 		gpios = <&P34 1 GPIO_ACTIVE_LOW>; //38
 		label = "status";
 		default-state = "on";
-		linux,default-trigger = "heartbeat";
+		linux,default-trigger = "none";
 	};
         gpio1 {
 			gpios = <&P27 1 GPIO_ACTIVE_HIGH>; //22
@@ -78,18 +78,6 @@
         gpio4 {
 			gpios = <&P29 1  GPIO_ACTIVE_HIGH>; // 26
 			label = "mpu_3v3_enable";
-			default-state = "on";
-			linux,default-trigger = "none";
-		};
-        gpio5 {
-			gpios = <&P2 1 GPIO_ACTIVE_HIGH>;  // 127
-			label = "wifi_enable";
-			default-state = "on";
-			linux,default-trigger = "none";
-		};
-        gpio6 {
-			gpios = <&P2 0  GPIO_ACTIVE_HIGH>; // 128
-			label = "bt_enable";
 			default-state = "on";
 			linux,default-trigger = "none";
 		};
