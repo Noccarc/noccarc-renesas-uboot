@@ -127,6 +127,9 @@ int board_init(void)
 	mdelay(13);
 	*(volatile u32 *)(PFC_P3B) = (*(volatile u32 *)(PFC_P3B) & 0xFFFFFFF7) | 0x08;
 
+	if (CONFIG_IS_ENABLED(LED))
+		led_default_state();
+
 	return 0;
 }
 

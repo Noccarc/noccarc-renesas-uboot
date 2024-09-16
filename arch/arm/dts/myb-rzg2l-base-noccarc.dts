@@ -26,7 +26,7 @@
 
 	leds {
 		
-
+		compatible = "gpio-leds";
 		gpio0 {
 			gpios = <&P40 2 GPIO_ACTIVE_HIGH>; //98
 			label = "vab_enable";
@@ -51,12 +51,12 @@
 			default-state = "off";
 			linux,default-trigger = "none";
 		};
-	led4 {
-		gpios = <&P34 1 GPIO_ACTIVE_LOW>; //38
-		label = "status";
-		default-state = "on";
-		linux,default-trigger = "none";
-	};
+		led4 {
+			gpios = <&P34 1 GPIO_ACTIVE_LOW>; //38
+			label = "status";
+			default-state = "on";
+			linux,default-trigger = "none";
+		};
         gpio1 {
 			gpios = <&P27 1 GPIO_ACTIVE_HIGH>; //22
 			label = "mcu_pwr_rst";
@@ -72,7 +72,7 @@
         gpio3 {
 			gpios = <&P37 1 GPIO_ACTIVE_HIGH>; // 25
 			label = "mpu_pwr_backup";
-			default-state = "off";
+			default-state = "on";
 			linux,default-trigger = "none";
 		};
         gpio4 {
