@@ -72,7 +72,7 @@
         gpio3 {
 			gpios = <&P37 1 GPIO_ACTIVE_HIGH>; // 25
 			label = "mpu_pwr_backup";
-			default-state = "on";
+			default-state = "off";
 			linux,default-trigger = "none";
 		};
         gpio4 {
